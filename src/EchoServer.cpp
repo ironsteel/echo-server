@@ -148,7 +148,6 @@ int EchoServer::handle(ConnectionInfo connInfo) {
 			if (bytes == 0) {
 				break;
 			}
-			std::cerr << "bytes received " << bytes << "\n";
 
 			if (bytes < 0) {
 				perror("recv failed");
@@ -206,5 +205,4 @@ void EchoServer::removeClient(const ConnectionInfo& connInfo) {
 void EchoServer::incrementMessagesForClient(const ConnectionInfo& connInfo) {
 	std::scoped_lock lock{mClientsMutex};
 	mClients[connInfo.addr] = ++mClients[connInfo.addr];
-	std::cerr << "message count " << connInfo.addr << ": " << mClients[connInfo.addr] << "\n";
 }
