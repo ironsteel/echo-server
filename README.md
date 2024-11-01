@@ -14,7 +14,7 @@ you need a recent gcc/g++ version that supports c++17
 ## Running example
 
 ```
-./echoserver 0.0.0.0:7777
+./echo-server 0.0.0.0:7777
 ```
 
 on another terminal:
