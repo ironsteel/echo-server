@@ -9,6 +9,8 @@ cmake . -DCMAKE_BUILD_TYPE=[Release|Debug]
 make
 ```
 
+you need a recent gcc/g++ version that supports c++17
+
 ## Running example
 
 ```
